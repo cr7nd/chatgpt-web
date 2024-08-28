@@ -5,7 +5,6 @@ const LOCAL_NAME = 'userStorage'
 export interface UserInfo {
   avatar: string
   name: string
-  description: string
 }
 
 export interface UserState {
