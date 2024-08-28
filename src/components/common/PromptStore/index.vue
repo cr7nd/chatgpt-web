@@ -47,7 +47,7 @@ const { isMobile } = useBasicLayout()
 const promptStore = usePromptStore()
 
 // Prompt在线导入推荐List,根据部署者喜好进行修改(assets/recommend.json)
-const promptRecommendList = PromptRecommend
+// const promptRecommendList = PromptRecommend
 const promptList = ref<any>(promptStore.promptList)
 
 // 用于添加修改的临时prompt参数
@@ -82,9 +82,9 @@ const changeShowModal = (mode: 'add' | 'modify' | 'local_import', selected = { k
 // 在线导入相关
 const downloadURL = ref('')
 const downloadDisabled = computed(() => downloadURL.value.trim().length < 1)
-const setDownloadURL = (url: string) => {
+/*const setDownloadURL = (url: string) => {
   downloadURL.value = url
-}
+}*/
 
 // 控制 input 按钮
 const inputStatus = computed (() => tempPromptKey.value.trim().length < 1 || tempPromptValue.value.trim().length < 1)
@@ -410,7 +410,7 @@ const dataSource = computed(() => {
             </NButton>
           </div>
           <NDivider />
-          <div class="max-h-[360px] overflow-y-auto space-y-4">
+<!--          <div class="max-h-[360px] overflow-y-auto space-y-4">
             <NCard
               v-for="info in promptRecommendList"
               :key="info.key" :title="info.key"
@@ -439,7 +439,7 @@ const dataSource = computed(() => {
                 </div>
               </template>
             </NCard>
-          </div>
+          </div>-->
         </NTabPane>
       </NTabs>
     </div>
